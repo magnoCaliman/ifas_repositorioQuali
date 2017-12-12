@@ -51,10 +51,10 @@ Synth("tocaBuffer", [rate: 0.midiratio, qualBuffer: ~excla.bufnum]);
 
 {
 	inf.do{
-		// Synth("tocaBuffer", [rate:((0,2..24)-12).midiratio.choose]);
+		// Synth("tocaBuffer", [rate:((0,2..24)-12).midiratio.choose]); //tons inteiros...
 		Synth("tocaBuffer", [rate:((0..24)-12).midiratio.choose, qualBuffer: ~excla.bufnum]);
 		[0.125, 0.25, 1, 1.5].choose.wait;
 	}
 }.fork
 
-/// daria pra fazer sem SynthDef? Só uma função com .set?
+/// daria pra simplificar, sem SynthDef? Só uma função com .set?
